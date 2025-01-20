@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Welcome</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui" />
+    <!-- ################ FAVICON -->
+    <!-- <link rel="shortcut icon" sizes="196x196" href="../assets/images/logo.png"> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <!-- ################ ICONS -->
+    <link rel="stylesheet" href="css/material-design-icons/material-design-icons.css" type="text/css" />
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.css" type="text/css" />
+    <!-- ################ BOOTSTRAP -->
+    <link rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
+    <!-- ################ CSS -->
+    <link rel="stylesheet" href="css/app.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css">
+    <!-- ################ FONT -->
+    <link rel="stylesheet" href="css/font.css" type="text/css" />
+</head>
+
+<body>
+    <div class="app" id="app">
+        <!-- ############ LAYOUT START-->
+        <!-- aside -->
+        <div id="aside" class="app-aside box-shadow-z3 modal fade lg nav-expand">
+            <div class="left navside white dk" layout="column">
+                <div class="navbar navbar-md primary no-radius box-shadow-z4">
+                    <!-- brand -->
+                    <a class="navbar-brand" href="dashboard.html">
+                        <div ui-include="'../assets/images/logo.white.svg'"></div>
+                        <img src="../assets/images/logo.png" alt="." class="hide" />
+                        <span class="hidden-folded inline">AVS Portal</span>
+                    </a>
+                    <!-- / brand -->
+                </div>
+                <!-- Navigation -->
+                <div flex class="hide-scroll">
+                    <nav class="scroll">
+                        <ul class="nav" ui-nav>
+                            <li>
+                                <a href="dashboard.html">
+                                    <span class="nav-icon">
+                                        <i class="material-icons">home</i>
+                                    </span>
+                                    <span class="nav-text">Dashboard</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="avs-merchant.html">
+                                    <span class="nav-icon">
+                                        <i class="material-icons">&#xe8b6;</i>
+                                    </span>
+                                    <span class="nav-text">AVS Merchant</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <span class="nav-caret">
+                                        <i class="fa fa-caret-down"></i>
+                                    </span>
+                                    <span class="nav-icon">
+                                        <i class="material-icons">&#xe24b;</i>
+                                    </span>
+                                    <span class="nav-text">Merchant Reports</span>
+                                </a>
+                                <ul class="nav-sub">
+                                    <li>
+                                        <a href="api-usage.html">
+                                            <span class="nav-text">API Usage</span>
+                                        </a>
+                                        <a href="avs-validation.html">
+                                            <span class="nav-text">AVS Validation</span>
+                                        </a>
+                                        <a href="merchant-summary.html">
+                                            <span class="nav-text">Merchant Summary</span>
+                                        </a>
+                                        <a href="error-report.html">
+                                            <span class="nav-text">Error Report</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- / aside -->
+
+        <!-- content -->
+        <div id="content" class="app-content box-shadow-z3" role="main">
+            <!-- header -->
+            <div class="app-header primary box-shadow-z4 navbar-md">
+                <div class="navbar navbar-toggleable-sm flex-row align-items-center">
+                    <!-- Open side - Naviation on mobile -->
+                    <a data-toggle="modal" data-target="#aside" class="hidden-lg-up mr-3">
+                        <i class="material-icons">&#xe5d2;</i>
+                    </a>
+                    <!-- / -->
+
+                    <!-- navbar collapse -->
+                    <div class="d-lg-none d-flex">
+                        <!-- brand -->
+                        <a class="navbar-brand">
+                            <div ui-include="'../assets/images/logo.white.svg'"></div>
+                            <img src="../assets/images/logo.png" alt="." class="hide" />
+                            <span class="hidden-folded inline">AVS Portal</span>
+                        </a>
+                        <!-- / brand -->
+                    </div>
+                    <!-- / navbar collapse -->
+
+                    <!-- navbar right -->
+                    <ul class="nav navbar-nav flex-row align-items-center ml-auto">
+                        <li class="nav-item dropdown">
+                            <a href class="nav-link dropdown-toggle text-ellipsis p-0" data-toggle="dropdown">
+                                <span class="avatar w-32">
+                                    <img src="images/user.png" alt="...">
+                                    <i class="on b-white bottom"></i>
+                                </span>
+                                <span class="hidden-sm-down _500">Naman</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-overlay pull-right p-0">
+                                <a class="dropdown-item p-2" href="index.html">
+                                    <span class="nav-icon">
+                                        <i class="material-icons">&#xe8ac;</i>
+                                    </span>
+                                    <span class="nav-text">Logout</span></a>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- / navbar right -->
+                </div>
+            </div>
+
+            <div class="app-body" id="view">
+                <!-- ############ PAGE START-->
+                <div class="padding">
+                    <div class="box-header row m-0 px-0 pt-0">
+                        <div class="col-12 px-0 d-flex justify-content-between">
+                            <h5 class="m-0 mt-2 mt-sm-0 _500">Error Report</h5>
+                        </div>
+                    </div>
+                    <div class="col-12 p-0 m-0"></div>
+                    <div class="box">
+                        <div class="box-body">
+                            <form role="form" class="p-0 m-0" id="createUser">
+                                <div class="form-group row m-0">
+                                    <label for="roleName" class="col-sm-3 col-12 form-control-label">Search</label>
+                                    <div class="col-sm-9 col-12 p-0">
+                                        <input type="text" class="form-control" id="roleName"
+                                            placeholder="Search by ID / Name">
+                                    </div>
+                                </div>
+                                <div class="form-group row m-0 pt-3">
+                                    <label for="date-range" class="col-sm-3 col-12 form-control-label">Date
+                                        Range</label>
+                                    <div class="col-sm-9 col-12 p-0">
+                                        <input type="date" class="form-control" id="roleName"
+                                            placeholder="Date Range">
+                                    </div>
+                                </div>
+                                <div class="col-12 p-0 m-0 pt-3 text-right">
+                                    <button type="submit" class="btn btn-outline-primary mr-2">Search</button>
+                                    <button type="submit" class="btn btn-primary">Download</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="padding pt-0">
+                    <div class="col-12 p-0 m-0"></div>
+                    <div class="box">
+                        <div class="box-body">
+                            <div class="table-responsive p-0 m-0">
+                                <table class="table b-t">
+                                    <thead class="table-active">
+                                        <tr>
+                                            <th>Date | Time</th>
+                                            <th>Merchant Name</th>
+                                            <th>Error Type</th>
+                                            <th>Error Description/Message</th>
+                                            <th>Endpoint</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>14-01-2025 | 13:00</td>
+                                            <td>ABC</td>
+                                            <td>API Authentication</td>
+                                            <td>Invalid API Token</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>14-01-2025 | 13:00</td>
+                                            <td>ABC</td>
+                                            <td>API Authentication</td>
+                                            <td>Invalid API Token</td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ############ PAGE END-->
+        </div>
+    </div>
+    <!-- / -->
+    <!-- ############ LAYOUT END-->
+    </div>
+
+    <!-- jQuery -->
+    <script src="js/salesChart.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/modalScripts.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/navScript.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>
