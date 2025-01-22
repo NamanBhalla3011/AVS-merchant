@@ -1128,7 +1128,7 @@ a.list-group-item.hover {
 
 .navbar {
   background: inherit;
-  min-height: 3.5rem;
+  min-height: 40px;
 }
 .navbar .up {
   margin: 0 -0.6em;
@@ -1138,23 +1138,23 @@ a.list-group-item.hover {
 }
 
 .navbar-md {
-  min-height: 4rem;
+  min-height: 40px;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
 .navbar-md .navbar {
-  min-height: auto;
+  min-height: 40px;
   padding-top: 0;
   padding-bottom: 0;
 }
 
 .navbar-sm {
-  min-height: 3rem;
+  min-height: 40px;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
 }
 .navbar-sm .navbar {
-  min-height: auto;
+  min-height: 40px;
   padding-top: 0;
   padding-bottom: 0;
 }
@@ -1248,6 +1248,7 @@ a.list-group-item.hover {
   z-index: 1040;
 }
 
+
 .pagination .page-item,
 .pagination > li > a,
 .pagination > li > span,
@@ -1282,8 +1283,9 @@ a.list-group-item.hover {
 .pager > .active > a,
 .pager > .active > span {
   color: white !important;
-  background-color: #0cc2aa !important;
-  border-color: #0cc2aa !important;
+  background-color: #0275d8 !important;
+  border-color: #0275d8 !important;
+  
 }
 
 .pagination > li {
@@ -2079,10 +2081,10 @@ body {
   z-index: 1020;
 }
 .app-header ~ .app-body {
-  padding-top: 3.5rem;
+  padding-top: 2rem;
 }
 .app-header.navbar-md ~ .app-body {
-  padding-top: 4rem;
+  padding-top: 2.5rem;
 }
 .app-header.navbar-sm ~ .app-body {
   padding-top: 3rem;
@@ -2134,10 +2136,10 @@ body {
   }
   .app-aside.lg:not(.folded),
   .app-aside.lg:not(.folded) .scroll {
-    width: 13.75rem;
+    width: 9.75rem;
   }
   .app-aside.lg:not(.hide) ~ .app-content {
-    margin-left: 13.75rem;
+    margin-left: 9.75rem;
   }
   .app-aside.sm:not(.folded),
   .app-aside.sm:not(.folded) .scroll {
@@ -2451,7 +2453,8 @@ body {
 }
 .navside .nav li li a {
   line-height: 2rem;
-  padding-left: 3.5rem;
+  padding-left: 1.5rem;
+  font-size: 12px;
 }
 .navside .nav li li a .nav-text {
   padding: 0.4375rem 0;
@@ -5330,8 +5333,8 @@ a.text-blue:hover {
 }
 
 .w-32 {
-  width: 32px;
-  height: 32px;
+  width: 25px;
+  height: 25px;
   line-height: 32px;
   display: inline-block;
   text-align: center;

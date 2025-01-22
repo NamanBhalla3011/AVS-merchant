@@ -1,9 +1,14 @@
-/* .active {
-    background-color: #6887ff !important;
-    color: white;
-  } */
+.active-link {
+  background-color: #0275d820 !important;
+  /* color: white; */
+}
 .btn {
   cursor: pointer;
+}
+
+.page-item:first-child .page-link {
+  border-bottom-left-radius: 0.25rem !important;
+  border-top-left-radius: 0.25rem !important;
 }
 
 .breadcrumb-item > a > h5 {
@@ -14,14 +19,41 @@
   text-decoration: underline;
 }
 
-.calender-icon{
-    background: lightgrey;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
+.calender-icon {
+  background: lightgrey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
 }
 
-.col-sm-3.col-12.form-control-label{
-  background-color: #f0f0f0;
+.col-sm-3.col-12.form-control-label,
+.col-sm-auto.col-12.form-control-label {
+  /* background-color: #f0f0f0; */
+}
+.radius-full,
+.radius-full:focus {
+  border-radius: 15px;
+  border: none;
+  background-color: #0275d810;
+}
+
+.radius-right {
+  border-radius: 0 15px 15px 0;
+}
+
+.radius-left {
+  border-radius: 15px 0 0 15px;
+}
+
+.font-12 {
+  font-size: 12px !important;
+}
+
+.font-14 {
+  font-size: 14px !important;
+}
+
+.label-width{
+  width: 115px !important;
 }
