@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Welcome</title>
+    <title>AVS Validation</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui" />
     <!-- ################ FAVICON -->
     <!-- <link rel="shortcut icon" sizes="196x196" href="../assets/images/logo.png"> -->
@@ -26,9 +26,9 @@
         <!-- aside -->
         <div id="aside" class="app-aside box-shadow-z3 modal fade lg nav-expand">
             <div class="left navside white dk" layout="column">
-                <div class="navbar navbar-md primary no-radius box-shadow-z4">
+                <div class="navbar navbar-md primary no-radius box-shadow-z4 p-0 p-1">
                     <!-- brand -->
-                    <a class="navbar-brand" href="dashboard.html">
+                    <a class="navbar-brand p-0" href="dashboard.html">
                         <div ui-include="'../assets/images/logo.white.svg'"></div>
                         <img src="../assets/images/logo.png" alt="." class="hide" />
                         <span class="hidden-folded inline">AVS Portal</span>
@@ -40,30 +40,30 @@
                     <nav class="scroll">
                         <ul class="nav" ui-nav>
                             <li>
-                                <a href="dashboard.html">
-                                    <span class="nav-icon">
+                                <a href="dashboard.html" class="p-0 px-2">
+                                    <span class="nav-icon mr-1">
                                         <i class="material-icons">home</i>
                                     </span>
-                                    <span class="nav-text">Dashboard</span>
+                                    <span class="nav-text font-12">Dashboard</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="avs-merchant.html">
-                                    <span class="nav-icon">
+                                <a href="avs-merchant.html" class="p-0 px-2">
+                                    <span class="nav-icon mr-1">
                                         <i class="material-icons">&#xe8b6;</i>
                                     </span>
-                                    <span class="nav-text">AVS Merchant</span>
+                                    <span class="nav-text font-12">AVS Merchant</span>
                                 </a>
                             </li>
-                            <li>
-                                <a>
-                                    <span class="nav-caret">
+                            <li class="active-link">
+                                <a class="p-0 px-2">
+                                    <span class="nav-caret ml-1">
                                         <i class="fa fa-caret-down"></i>
                                     </span>
-                                    <span class="nav-icon">
+                                    <span class="nav-icon mr-1">
                                         <i class="material-icons">&#xe24b;</i>
                                     </span>
-                                    <span class="nav-text">Merchant Reports</span>
+                                    <span class="nav-text font-12">Merchant Reports</span>
                                 </a>
                                 <ul class="nav-sub">
                                     <li>
@@ -92,7 +92,7 @@
         <!-- content -->
         <div id="content" class="app-content box-shadow-z3" role="main">
             <!-- header -->
-            <div class="app-header primary box-shadow-z4 navbar-md">
+            <div class="app-header primary box-shadow-z4 navbar-md p-0">
                 <div class="navbar navbar-toggleable-sm flex-row align-items-center">
                     <!-- Open side - Naviation on mobile -->
                     <a data-toggle="modal" data-target="#aside" class="hidden-lg-up mr-3">
@@ -122,12 +122,12 @@
                                 </span>
                                 <span class="hidden-sm-down _500">Naman</span>
                             </a>
-                            <div class="dropdown-menu dropdown-menu-overlay pull-right p-0">
-                                <a class="dropdown-item p-2" href="index.html">
-                                    <span class="nav-icon">
+                            <div class="dropdown-menu dropdown-menu-overlay pull-right p-0" style="min-width: 90px;">
+                                <a class="dropdown-item p-1" href="index.html">
+                                    <span class="nav-icon mr-1">
                                         <i class="material-icons">&#xe8ac;</i>
                                     </span>
-                                    <span class="nav-text">Logout</span></a>
+                                    <span class="nav-text" style="font-size: 12px;">Logout</span></a>
                             </div>
                         </li>
                     </ul>
@@ -140,43 +140,36 @@
                 <div class="padding">
                     <div class="box-header row m-0 px-0 pt-0">
                         <div class="col-12 px-0 d-flex justify-content-between">
-                            <h5 class="m-0 mt-2 mt-sm-0 _500">AVS Validation Report</h5>
+                            <h5 class="m-0 mt-2 mt-sm-0 _600">AVS Validation Report</h5>
                         </div>
                     </div>
-                    <div class="col-12 p-0 m-0"></div>
-                    <div class="box">
-                        <div class="box-body">
-                            <form role="form" class="p-0 m-0" id="createUser">
-                                <div class="form-group row m-0">
-                                    <label for="roleName" class="col-sm-3 col-12 form-control-label">Search</label>
-                                    <div class="col-sm-9 col-12 p-0">
-                                        <input type="text" class="form-control" id="roleName"
-                                            placeholder="Search by Request ID / Merchant Name">
-                                    </div>
-                                </div>
-                                <div class="col-12 p-0 m-0 pt-3 text-right">
-                                    <button type="submit" class="btn btn-outline-primary mr-2">Search</button>
-                                    <button type="submit" class="btn btn-primary">Download</button>
-                                </div>
-                            </form>
+                    <form role="form" class="p-0 m-0 row" id="createUser">
+                        <label for="roleName" class="col-sm-auto col-12 form-control-label pl-0">Search</label>
+                        <div class="col-sm-3 col-12 p-0">
+                            <input type="text" class="form-control radius-full" id="roleName"
+                                placeholder="Search By ID/Name">
                         </div>
-                    </div>
+                        <div class="col-auto ml-auto p-0 m-0 mt-3 mt-sm-0 text-right">
+                            <button type="submit" class="btn btn-outline-primary font-14">Search</button>
+                            <button type="submit" class="ml-2 btn btn-primary font-14">Download</button>
+                        </div>
+                    </form>
                 </div>
                 <div class="padding pt-0">
                     <div class="col-12 p-0 m-0"></div>
                     <div class="box">
                         <div class="box-body">
-                            <div class="table-responsive p-0 m-0">
-                                <table class="table b-t">
+                            <div class="p-0 m-0 table-responsive">
+                                <table class="table b-t text-center" style="min-width: 700px;">
                                     <thead class="table-active">
                                         <tr>
-                                            <th>Request ID</th>
-                                            <th>Merchant Name</th>
-                                            <th>Date and Time of Request</th>
-                                            <th>Fields Verified</th>
-                                            <th>Verification Status</th>
-                                            <th>Bank Name</th>
-                                            <th>Error</th>
+                                            <th class="text-center">Request ID</th>
+                                            <th class="text-center">Merchant Name</th>
+                                            <th class="text-center">Date and Time of Request</th>
+                                            <th class="text-center">Fields Verified</th>
+                                            <th class="text-center">Verification Status</th>
+                                            <th class="text-center">Bank Name</th>
+                                            <th class="text-center">Error</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -196,13 +189,23 @@
                                             <td>Phone, email, Initials</td>
                                             <td>Matched</td>
                                             <td>ABC</td>
-                                            <td><a href="#" data-toggle="modal" data-target="#modalRegister"
-                                                    class="btn btn-outline-primary p-0 m-0 px-2">View</a>
+                                            <td>
+                                                <a href="#" data-toggle="modal" data-target="#modalRegister"
+                                                    class="btn btn-primary font-14 p-0 m-0 px-2 rounded">View</a>
                                             </td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
+                            <nav aria-label="...">
+                                <ul class="pagination pagination-md justify-content-center mb-0 mt-2">
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                </ul>
+                            </nav>
                         </div>
                     </div>
                 </div>
@@ -218,17 +221,14 @@
     <div class="modal fade" id="modalRegister" class="modal fade" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModal">Details</h5>
-
+                <div class="modal-header py-2">
+                    <h6 class="modal-title _600" id="exampleModal">Error Message</h6>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"
+                        style="border: none; background-color: #fff;font-size: 14px;cursor: pointer;">X</button>
                 </div>
-                <div class="modal-body row">
-                    <p class="col-sm-12">Error: <span class="font-weight-bold">Lorem ipsum dolor sit amet consectetur
-                            adipisicing elit. Ut consectetur quam dolorum.
-                        </span></p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <div class="modal-body row py-2">
+                    <p class="col-sm-12 m-0">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Ut consectetur quam dolorum.</p>
                 </div>
             </div>
         </div>

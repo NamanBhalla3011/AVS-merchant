@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Welcome</title>
+  <title>Add Merchant</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui" />
   <!-- ################ FAVICON -->
   <!-- <link rel="shortcut icon" sizes="196x196" href="../assets/images/logo.png"> -->
@@ -26,9 +26,9 @@
     <!-- aside -->
     <div id="aside" class="app-aside box-shadow-z3 modal fade lg nav-expand">
       <div class="left navside white dk" layout="column">
-        <div class="navbar navbar-md primary no-radius box-shadow-z4">
+        <div class="navbar navbar-md primary no-radius box-shadow-z4 p-0 p-1">
           <!-- brand -->
-          <a class="navbar-brand" href="dashboard.html">
+          <a class="navbar-brand p-0" href="dashboard.html">
             <div ui-include="'../assets/images/logo.white.svg'"></div>
             <img src="../assets/images/logo.png" alt="." class="hide" />
             <span class="hidden-folded inline">AVS Portal</span>
@@ -40,30 +40,30 @@
           <nav class="scroll">
             <ul class="nav" ui-nav>
               <li>
-                <a href="dashboard.html">
-                  <span class="nav-icon">
+                <a href="dashboard.html" class="p-0 px-2">
+                  <span class="nav-icon mr-1">
                     <i class="material-icons">home</i>
                   </span>
-                  <span class="nav-text">Dashboard</span>
+                  <span class="nav-text font-12">Dashboard</span>
                 </a>
               </li>
-              <li>
-                <a href="avs-merchant.html">
-                  <span class="nav-icon">
+              <li class="active-link">
+                <a href="avs-merchant.html" class="p-0 px-2">
+                  <span class="nav-icon mr-1">
                     <i class="material-icons">&#xe8b6;</i>
                   </span>
-                  <span class="nav-text">AVS Merchant</span>
+                  <span class="nav-text font-12">AVS Merchant</span>
                 </a>
               </li>
               <li>
-                <a>
-                  <span class="nav-caret">
+                <a class="p-0 px-2">
+                  <span class="nav-caret ml-1">
                     <i class="fa fa-caret-down"></i>
                   </span>
-                  <span class="nav-icon">
+                  <span class="nav-icon mr-1">
                     <i class="material-icons">&#xe24b;</i>
                   </span>
-                  <span class="nav-text">Merchant Reports</span>
+                  <span class="nav-text font-12">Merchant Reports</span>
                 </a>
                 <ul class="nav-sub">
                   <li>
@@ -92,7 +92,7 @@
     <!-- content -->
     <div id="content" class="app-content box-shadow-z3" role="main">
       <!-- header -->
-      <div class="app-header primary box-shadow-z4 navbar-md">
+      <div class="app-header primary box-shadow-z4 navbar-md p-0">
         <div class="navbar navbar-toggleable-sm flex-row align-items-center">
           <!-- Open side - Naviation on mobile -->
           <a data-toggle="modal" data-target="#aside" class="hidden-lg-up mr-3">
@@ -122,12 +122,12 @@
                 </span>
                 <span class="hidden-sm-down _500">Naman</span>
               </a>
-              <div class="dropdown-menu dropdown-menu-overlay pull-right p-0">
-                <a class="dropdown-item p-2" href="index.html">
-                  <span class="nav-icon">
+              <div class="dropdown-menu dropdown-menu-overlay pull-right p-0" style="min-width: 90px;">
+                <a class="dropdown-item p-1" href="index.html">
+                  <span class="nav-icon mr-1">
                     <i class="material-icons">&#xe8ac;</i>
                   </span>
-                  <span class="nav-text">Logout</span></a>
+                  <span class="nav-text" style="font-size: 12px;">Logout</span></a>
               </div>
             </li>
           </ul>
@@ -141,69 +141,82 @@
           <div class="box-header row m-0 px-0 pt-0">
             <div aria-label="breadcrumb">
               <ol class="breadcrumb p-0 m-0">
-                <li class="breadcrumb-item"><a href="avs-merchant.html" class="m-0 mt-2 mt-sm-0 _500">
-                    <h5 class="m-0 mt-2 mt-sm-0 _500 text-primary">AVS Merchant</h5>
+                <li class="breadcrumb-item"><a href="avs-merchant.html" class="m-0 mt-sm-0">
+                    <h5 class="m-0 mt-2 mt-sm-0 _600 text-primary">Merchant</h5>
                   </a></li>
                 <li class="breadcrumb-item active mx-2" aria-current="page">
                   <h5 class="m-0 mt-2 mt-sm-0 _500">/</h5>
                 </li>
                 <li class="breadcrumb-item active" aria-current="page">
-                  <h5 class="m-0 mt-2 mt-sm-0 _500 text-black">Add New AVS Merchant</h5>
+                  <h5 class="m-0 mt-2 mt-sm-0 _600 text-black">Add Merchant</h5>
                 </li>
               </ol>
             </div>
           </div>
-          <div class="col-12 p-0 m-0"></div>
-          <div class="box">
-            <div class="box-body">
-              <form role="form" class="p-0 m-0" id="createUser">
-                <div class="form-group row mx-0">
-                  <label for="roleName" class="col-sm-3 col-12 form-control-label">Merchant Name</label>
-                  <div class="col-sm-9 col-12 p-0">
-                    <input type="text" class="form-control" id="roleName" placeholder="Enter Role Name">
-                  </div>
+          <!-- NEW -->
+          <form role="form" class="p-0 m-0 row" id="createUser">
+            <div class="col-12 p-0 m-0">
+              <div class="row p-0 m-0">
+                <label for="roleName" class="form-control-label pl-0 label-width">Merchant
+                  Name</label>
+                <div class="col-sm-6 col-12 p-0">
+                  <input type="text" class="form-control radius-full" id="roleName" placeholder="Enter Merchant Name">
                 </div>
-                <div class="form-group row mx-0">
-                  <label for="roleName" class="col-sm-3 col-12 form-control-label">Contact No.</label>
-                  <div class="col-sm-9 col-12 p-0">
-                    <input type="text" class="form-control" id="roleName" placeholder="Enter Phone No.">
-                  </div>
-                </div>
-                <div class="form-group row mx-0">
-                  <label for="roleName" class="col-sm-3 col-12 form-control-label">Email Id</label>
-                  <div class="col-sm-9 col-12 p-0">
-                    <input type="text" class="form-control" id="roleName" placeholder="Enter email">
-                  </div>
-                </div>
-                <div class="form-group row mx-0">
-                  <label for="roleName" class="col-sm-3 col-12 form-control-label">Username</label>
-                  <div class="col-sm-9 col-12 p-0">
-                    <input type="text" class="form-control" id="roleName" placeholder="Enter username">
-                  </div>
-                </div>
-                <div class="form-group row mx-0">
-                  <label for="roleName" class="col-sm-3 col-12 form-control-label">Password</label>
-                  <div class="col-sm-9 col-12 p-0">
-                    <input type="text" class="form-control" id="roleName" placeholder="Enter password">
-                  </div>
-                </div>
-                <div class="form-group row m-0">
-                  <label for="roleName" class="col-sm-3 col-12 form-control-label">Status</label>
-                  <div class="col-sm-9 col-12 p-0">
-                    <select class="form-control c-select">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-12 p-0 m-0 pt-3 text-right">
-                  <button type="submit" class="btn btn-outline-primary">Submit</button>
-                </div>
-              </form>
+              </div>
             </div>
-          </div>
+            <div class="col-12 p-0 m-0 my-2 my-sm-3">
+              <div class="row p-0 m-0">
+                <label for="roleName" class="form-control-label pl-0 label-width">Contact No.</label>
+                <div class="col-sm-6 col-12 p-0">
+                  <input type="text" class="form-control radius-full" id="roleName" placeholder="Enter Contact No">
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 p-0 m-0">
+              <div class="row p-0 m-0">
+                <label for="roleName" class="form-control-label pl-0 label-width">Email Id</label>
+                <div class="col-sm-6 col-12 p-0">
+                  <input type="email" class="form-control radius-full" id="roleName" placeholder="Enter Email Id">
+                </div>
+              </div>
+            </div>
+            <div class="col-12 p-0 m-0 my-2 my-sm-3">
+              <div class="row p-0 m-0">
+                <label for="roleName" class="form-control-label pl-0 label-width">Username</label>
+                <div class="col-sm-6 col-12 p-0">
+                  <input type="text" class="form-control radius-full" id="roleName" placeholder="Enter Username">
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12  p-0 m-0">
+              <div class="row p-0 m-0">
+                <label for="roleName" class="form-control-label pl-0 label-width">Password</label>
+                <div class="col-sm-6 col-12 p-0">
+                  <input type="password" class="form-control radius-full" id="roleName"
+                    placeholder="Enter Merchant Name">
+                </div>
+              </div>
+            </div>
+            <div class="col-12 p-0 m-0 my-2 my-sm-3">
+              <div class="row p-0 m-0">
+                <label for="roleName" class="form-control-label pl-0 label-width">Status</label>
+                <div class="col-sm-6 col-12 p-0">
+                  <select class="form-control c-select radius-full">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-auto ml-auto p-0 m-0 mt-4">
+              <button type="submit" class="btn btn-primary font-14">Submit</button>
+            </div>
+          </form>
         </div>
       </div>
 
